@@ -1,0 +1,31 @@
+--Create a video game store data base
+
+CREATE TABLE video_game (id INTEGER PRIMARY KEY, title TEXT, platform TEXT, price REAL);
+
+INSERT INTO video_game VALUES (1, "Diablo 4", "Playstation 4, Playstation 5, Xbox One, Xbox Series X, PC", 69.99);
+INSERT INTO video_game VALUES (2, "CALL OF DUTY", "Playstation 4, Playstation 5, Xbox One, Xbox Series X, PC", 59.99);
+INSERT INTO video_game VALUES (3, "Zelda Tears of the Kindom", "Nintendo Switch", 69.99);
+INSERT INTO video_game VALUES (4, "Zelda Breath of the Wild", "Nintendo Switch", 39.99);
+INSERT INTO video_game VALUES (5, "Final Fantasy VII Remake", "Playstaion 4, Playstation 5", 49.99);
+INSERT INTO video_game VALUES (6, "Final Fantasy 16", "Playstaion 5", 69.99);
+INSERT INTO video_game VALUES (7, "StarField", "Playstation 4, Playstation 5, Xbox One, Xbox Series X, PC", 59.99);
+INSERT INTO video_game VALUES (8, "Star Citizen", "PC", 39.99); 
+INSERT INTO video_game VALUES (9, "Hogwarts Legacy", "Playstation 5, Xbox Series X, Nintendo Switch, PC", 59.99); 
+INSERT INTO video_game VALUES (10, "Tarkov", "PC", 49.99); 
+INSERT INTO video_game VALUES (11, "STAR WARS Jedi: Fall Order", "Playstation 4, Playstation 5, Xbox One, Xbox Series X, PC", 34.99);
+INSERT INTO video_game VALUES (12, "STAR WARS Jedi: Survivor", "Playstation 5, Xbox Series X, PC", 69.99);
+INSERT INTO video_game VALUES (13, "Wo Long: Fallen Dynasty", "Playstation 4, Playstation 5, Xbox One, Xbox Series X, PC", 59.99);
+INSERT INTO video_game VALUES (14, "The Lord of the Rings: Gollum", "Playstation 4, Playstation 5, Xbox One, Xbox Series X, PC", 59.99);
+INSERT INTO video_game VALUES (15, "Assassin’s Creed Mirage", "Playstation 5, Xbox Series X, PC", 69.99);
+  
+  
+  
+--Show table with all games for the Playstation 5 and ordered them by price
+SELECT * FROM video_game WHERE platform LIKE "%Playstation 5%" ORDER BY price;
+
+--Show table with all games for the Nintendo Switch and ordered them by price
+SELECT * FROM video_game WHERE platform LIKE "%Nintendo%" ORDER BY price;
+
+--Show table with all games for the PC only and ordered them by price
+SELECT * FROM video_game WHERE platform = "PC" ORDER BY price;
+
