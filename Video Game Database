@@ -23,8 +23,8 @@ INSERT INTO video_game VALUES (15, "Assassin’s Creed Mirage", "Playstation 5, 
 --Show table with all games for the Playstation 5 and ordered them by price
 SELECT * FROM video_game WHERE platform LIKE "%Playstation 5%" ORDER BY price;
 
---Show table with all games for the Nintendo Switch and ordered them by price
-SELECT * FROM video_game WHERE platform LIKE "%Nintendo%" ORDER BY price;
+--Show table with all games under $40 and ordered them by price
+SELECT * FROM video_game WHERE price < 40 ORDER BY price;
 
 --Show table with all games for the PC only and ordered them by price
 SELECT * FROM video_game WHERE platform = "PC" ORDER BY price;
